@@ -1,0 +1,9 @@
+.placeholder-image-container {
+  display: flex;
+  position: relative;
+}
+ 
+.placeholder-image-pasted-image {
+  width: 495px;
+  height: 400px;
+}
