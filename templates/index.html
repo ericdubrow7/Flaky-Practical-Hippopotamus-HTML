@@ -54,9 +54,9 @@
     />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" />
 
       <div class="home-container">
         <navbar-interactive1-wrapper
@@ -76,15 +76,12 @@
                 class="navbar-interactive1-desktop-menu"
               >
                 <nav class="navbar-interactive1-links1">
-                  <a href="index.html" class="navbar-interactive1-navlink1">
+                  <a href="{{ url_for('index') }}" class="navbar-interactive1-navlink1">
                     <fragment class="home-fragment10">
                       <span class="home-text10">Home</span>
                     </fragment>
                   </a>
-                  <a
-                    href="player-stats.html"
-                    class="navbar-interactive1-navlink2"
-                  >
+                  <a href="{{ url_for('playerstats') }}" class="navbar-interactive1-navlink2">
                     <fragment class="home-fragment11">
                       <span class="home-text11">
                         Self Service Data Analysis
@@ -97,7 +94,7 @@
                     </fragment>
                   </span>
                   <a
-                    href="latest-nba-news.html"
+                    href="{{ url_for('latest-nba-news') }}"
                     class="navbar-interactive1-navlink3"
                   >
                     <fragment class="home-fragment13">
@@ -274,7 +271,7 @@
                 <div class="thq-animated-group-horizontal">
                   <img
                     alt="pastedImage"
-                    src="public/external/pastedimage-curp-400h.png"
+                    src="{{ url_for('static', filename='public/external/pastedimage-3dcs-400h.png') }}"
                     class="hero17-pasted-image10"
                   />
                   <img
